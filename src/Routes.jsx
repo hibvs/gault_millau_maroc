@@ -1,3 +1,4 @@
+// src/Routes.jsx
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
@@ -9,6 +10,7 @@ import ActualitSGastronomiquesEditorialHub from "pages/actualit-s-gastronomiques
 import VNementsCulinairesEventsCalendar from "pages/v-nements-culinaires-events-calendar";
 import RestaurantsDiscoveryHub from "pages/restaurants-discovery-hub";
 import GuidesRegionauxRegionalDiscovery from "pages/guides-r-gionaux-regional-discovery";
+import NavigationSystemGlobalHeader from "pages/navigation-system-global-header";
 import NotFound from "pages/NotFound";
 
 const Routes = () => {
@@ -23,6 +25,7 @@ const Routes = () => {
           <Route path="/v-nements-culinaires-events-calendar" element={<VNementsCulinairesEventsCalendar />} />
           <Route path="/restaurants-discovery-hub" element={<RestaurantsDiscoveryHub />} />
           <Route path="/guides-r-gionaux-regional-discovery" element={<GuidesRegionauxRegionalDiscovery />} />
+          <Route path="/navigation-system-global-header" element={<NavigationSystemGlobalHeader />} />
           <Route path="*" element={<NotFound />} />
         </RouterRoutes>
       </ErrorBoundary>
