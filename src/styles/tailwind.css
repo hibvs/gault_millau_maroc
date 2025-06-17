@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #8B2635; /* Moroccan burgundy for authority and warmth */
+    --color-primary-50: #FDF2F4; /* Very light burgundy tint */
+    --color-primary-100: #FCE7EA; /* Light burgundy tint */
+    --color-primary-200: #F7C2C9; /* Medium light burgundy */
+    --color-primary-300: #F19DA8; /* Medium burgundy */
+    --color-primary-400: #E85A6F; /* Bright burgundy */
+    --color-primary-500: #D63851; /* Medium dark burgundy */
+    --color-primary-600: #B52D42; /* Dark burgundy */
+    --color-primary-700: #8B2635; /* Primary burgundy */
+    --color-primary-800: #6B1E29; /* Very dark burgundy */
+    --color-primary-900: #4A151C; /* Darkest burgundy */
+
+    /* Secondary Colors */
+    --color-secondary: #D4A574; /* Warm gold for premium moments and accents */
+    --color-secondary-50: #FDF9F4; /* Very light gold tint */
+    --color-secondary-100: #FAF0E6; /* Light gold tint */
+    --color-secondary-200: #F2E0C7; /* Medium light gold */
+    --color-secondary-300: #E9CFA8; /* Medium gold */
+    --color-secondary-400: #DDBA8E; /* Bright gold */
+    --color-secondary-500: #D4A574; /* Primary gold */
+    --color-secondary-600: #C4955F; /* Medium dark gold */
+    --color-secondary-700: #A67D4F; /* Dark gold */
+    --color-secondary-800: #7D5E3C; /* Very dark gold */
+    --color-secondary-900: #543F29; /* Darkest gold */
+
+    /* Accent Colors */
+    --color-accent: #C17B5A; /* Terracotta for interactive elements and highlights */
+    --color-accent-50: #FBF6F3; /* Very light terracotta tint */
+    --color-accent-100: #F6EDE7; /* Light terracotta tint */
+    --color-accent-200: #EDD5C7; /* Medium light terracotta */
+    --color-accent-300: #E3BDA7; /* Medium terracotta */
+    --color-accent-400: #D29C81; /* Bright terracotta */
+    --color-accent-500: #C17B5A; /* Primary terracotta */
+    --color-accent-600: #A8664A; /* Medium dark terracotta */
+    --color-accent-700: #8A543D; /* Dark terracotta */
+    --color-accent-800: #67402E; /* Very dark terracotta */
+    --color-accent-900: #442B1F; /* Darkest terracotta */
+
+    /* Background Colors */
+    --color-background: #FEFCF8; /* Warm white for comfortable extended reading */
+    --color-surface: #F7F3ED; /* Subtle cream for card backgrounds and sections */
+
+    /* Text Colors */
+    --color-text-primary: #2C1810; /* Rich brown for excellent readability */
+    --color-text-secondary: #6B5B4F; /* Warm gray for supporting information */
+
+    /* Status Colors */
+    --color-success: #7A8471; /* Sage green for confirmations and positive actions */
+    --color-success-50: #F6F7F6; /* Very light sage tint */
+    --color-success-100: #EDEEED; /* Light sage tint */
+    --color-success-200: #D4D7D2; /* Medium light sage */
+    --color-success-300: #BABFB7; /* Medium sage */
+    --color-success-400: #9AA39C; /* Bright sage */
+    --color-success-500: #7A8471; /* Primary sage */
+    --color-success-600: #6A7361; /* Medium dark sage */
+    --color-success-700: #575F51; /* Dark sage */
+    --color-success-800: #424740; /* Very dark sage */
+    --color-success-900: #2D302B; /* Darkest sage */
+
+    --color-warning: #E6A756; /* Warm amber for attention without alarm */
+    --color-warning-50: #FDF9F3; /* Very light amber tint */
+    --color-warning-100: #FAF1E7; /* Light amber tint */
+    --color-warning-200: #F2DCC2; /* Medium light amber */
+    --color-warning-300: #EAC79D; /* Medium amber */
+    --color-warning-400: #E8B779; /* Bright amber */
+    --color-warning-500: #E6A756; /* Primary amber */
+    --color-warning-600: #D19543; /* Medium dark amber */
+    --color-warning-700: #B07D37; /* Dark amber */
+    --color-warning-800: #835E2A; /* Very dark amber */
+    --color-warning-900: #563F1C; /* Darkest amber */
+
+    --color-error: #B85450; /* Muted red for helpful error guidance */
+    --color-error-50: #FBF3F3; /* Very light red tint */
+    --color-error-100: #F7E7E6; /* Light red tint */
+    --color-error-200: #ECC2C0; /* Medium light red */
+    --color-error-300: #E09D9A; /* Medium red */
+    --color-error-400: #D47975; /* Bright red */
+    --color-error-500: #B85450; /* Primary red */
+    --color-error-600: #A64844; /* Medium dark red */
+    --color-error-700: #8A3C39; /* Dark red */
+    --color-error-800: #672D2B; /* Very dark red */
+    --color-error-900: #441E1D; /* Darkest red */
+
+    /* Border Colors */
+    --color-border: #E8DDD4; /* Warm gray border */
+    --color-border-light: #F2E9E0; /* Light warm gray border */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+  }
+
+  .font-accent {
+    font-family: 'Crimson Text', serif;
+  }
+}
+
+@layer components {
+  .shadow-warm {
+    box-shadow: 0 4px 20px rgba(44, 24, 16, 0.08);
+  }
+
+  .shadow-warm-lg {
+    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.12);
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-quick {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
