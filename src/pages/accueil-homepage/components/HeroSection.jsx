@@ -10,8 +10,8 @@ const HeroSection = () => {
   const heroSlides = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1548542548-652206c8e326?w=1920&h=1080&fit=crop",
-      title: "L\\Excellence Culinaire Marocaine",
+      image: "/assets/images/slide1.jpeg",
+      title: "L'Excellence Culinaire Marocaine",
       subtitle: "Découvrez les restaurants d\\exception sélectionnés par nos critiques",
       restaurant: "La Mamounia",
       location: "Marrakech",
@@ -19,7 +19,7 @@ const HeroSection = () => {
     },
     {
       id: 2,
-      image: "https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?w=1920&h=1080&fit=crop",
+      image: "/assets/images/slide2.jpeg",
       title: "Tradition & Innovation",
       subtitle: "Où l\\art culinaire ancestral rencontre la créativité contemporaine",
       restaurant: "Dar Roumana",
@@ -28,7 +28,7 @@ const HeroSection = () => {
     },
     {
       id: 3,
-      image: "https://images.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg?w=1920&h=1080&fit=crop",
+      image: "/assets/images/slide3.jpeg",
       title: "Saveurs Authentiques",
       subtitle: "Les meilleures tables pour une expérience gastronomique inoubliable",
       restaurant: "Le Cabestan",
