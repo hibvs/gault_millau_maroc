@@ -7,32 +7,44 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary Colors
-        'primary': '#8B2635', // Moroccan burgundy for authority and warmth
-        'primary-50': '#FDF2F4', // Very light burgundy tint
-        'primary-100': '#FCE7EA', // Light burgundy tint
-        'primary-200': '#F7C2C9', // Medium light burgundy
-        'primary-300': '#F19DA8', // Medium burgundy
-        'primary-400': '#E85A6F', // Bright burgundy
-        'primary-500': '#D63851', // Medium dark burgundy
-        'primary-600': '#B52D42', // Dark burgundy
-        'primary-700': '#8B2635', // Primary burgundy
-        'primary-800': '#6B1E29', // Very dark burgundy
-        'primary-900': '#4A151C', // Darkest burgundy
+        // Gault & Millau French Brand Colors
+        'gm-gold': '#FFD700', // Golden yellow header background
+        'gm-gold-light': '#FFF8DC', // Light gold tint
+        'gm-gold-dark': '#DAA520', // Dark gold for depth
+        'gm-red': '#E31E24', // Gault & Millau signature red
+        'gm-red-dark': '#C91A1F', // Darker red for hover states
+        'gm-red-light': '#FF4444', // Light red for accents
+        
+        // Navigation icon colors
+        'nav-blue': '#007BFF', // Blue for navigation icons
+        'nav-green': '#28A745', // Green for navigation icons
+        'nav-orange': '#FD7E14', // Orange for navigation icons
+        
+        // Primary Colors (Updated to match French branding)
+        'primary': '#E31E24', // Gault & Millau red as primary
+        'primary-50': '#FEF2F2',
+        'primary-100': '#FEE2E2',
+        'primary-200': '#FECACA',
+        'primary-300': '#FCA5A5',
+        'primary-400': '#F87171',
+        'primary-500': '#E31E24',
+        'primary-600': '#C91A1F',
+        'primary-700': '#B91C1C',
+        'primary-800': '#991B1B',
+        'primary-900': '#7F1D1D',
 
-        // Secondary Colors
-        'secondary': '#D4A574', // Warm gold for premium moments and accents
-        'secondary-50': '#FDF9F4', // Very light gold tint
-        'secondary-100': '#FAF0E6', // Light gold tint
-        'secondary-200': '#F2E0C7', // Medium light gold
-        'secondary-300': '#E9CFA8', // Medium gold
-        'secondary-400': '#DDBA8E', // Bright gold
-        'secondary-500': '#D4A574', // Primary gold
-        'secondary-600': '#C4955F', // Medium dark gold
-        'secondary-700': '#A67D4F', // Dark gold
-        'secondary-800': '#7D5E3C', // Very dark gold
-        'secondary-900': '#543F29', // Darkest gold
-
+        // Secondary Colors (Golden theme)
+        'secondary': '#FFD700', // Golden yellow
+        'secondary-50': '#FFFDF0',
+        'secondary-100': '#FFF8DC',
+        'secondary-200': '#FFF2A8',
+        'secondary-300': '#FFED74',
+        'secondary-400': '#FFE740',
+        'secondary-500': '#FFD700',
+        'secondary-600': '#DAA520',
+        'secondary-700': '#B8860B',
+        'secondary-800': '#967408',
+        'secondary-900': '#745506',
         // Accent Colors
         'accent': '#C17B5A', // Terracotta for interactive elements and highlights
         'accent-50': '#FBF6F3', // Very light terracotta tint
