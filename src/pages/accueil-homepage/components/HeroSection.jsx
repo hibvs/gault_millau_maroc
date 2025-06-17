@@ -12,7 +12,7 @@ const HeroSection = () => {
       id: 1,
       image: "/assets/images/slide1.jpeg",
       title: "L'Excellence Culinaire Marocaine",
-      subtitle: "Découvrez les restaurants d\\exception sélectionnés par nos critiques",
+      subtitle: "Découvrez les restaurants d'exception sélectionnés par nos critiques",
       restaurant: "La Mamounia",
       location: "Marrakech",
       rating: "18/20"
@@ -21,7 +21,7 @@ const HeroSection = () => {
       id: 2,
       image: "/assets/images/slide2.jpeg",
       title: "Tradition & Innovation",
-      subtitle: "Où l\\art culinaire ancestral rencontre la créativité contemporaine",
+      subtitle: "Où l'art culinaire ancestral rencontre la créativité contemporaine",
       restaurant: "Dar Roumana",
       location: "Fès",
       rating: "17/20"
@@ -84,7 +84,7 @@ const HeroSection = () => {
               <div className="flex items-center space-x-3 mb-4">
                 <div className="h-auto w-48 md:w-56">
                   <Image 
-                    src="/assets/images/Logo_Gault&Millau-RVB_H-1750084252151.png" 
+                    src="/assets/images/Logo Gault&Millau-blanc_H.png" 
                     alt="Gault & Millau Maroc Logo"
                     className="w-full h-auto"
                   />

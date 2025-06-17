@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         // Primary Colors
-        'primary': '#8B2635', // Moroccan burgundy for authority and warmth
+        'primary': '#DD0A00', // Moroccan burgundy for authority and warmth
         'primary-50': '#FDF2F4', // Very light burgundy tint
         'primary-100': '#FCE7EA', // Light burgundy tint
         'primary-200': '#F7C2C9', // Medium light burgundy
