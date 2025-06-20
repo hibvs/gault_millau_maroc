@@ -5,34 +5,29 @@ import Image from 'components/AppImage';
 
 const ArticleCard = ({ article }) => {
   return (
-    <article className="bg-surface rounded-xl overflow-hidden shadow-warm hover:shadow-warm-lg transition-all duration-300 group">
-      {/* Image */}
+    <article className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-[#FFEB00]">
       <div className="relative overflow-hidden h-48">
         <Image
           src={article.image}
           alt={article.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
         <div className="absolute top-3 left-3">
-          <span className="bg-primary text-white px-2.5 py-1 rounded-full text-xs font-medium">
+          <span className="bg-[#FFEB00] text-black px-2.5 py-1 rounded-full text-xs font-medium">
             {article.category}
           </span>
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-6">
-        <h3 className="font-serif text-xl font-bold text-text-primary mb-3 leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
+        <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#FF0000] transition-colors duration-300 line-clamp-2">
           {article.title}
         </h3>
-        
-        <p className="text-text-secondary text-sm mb-4 leading-relaxed line-clamp-3">
+        <p className="text-gray-700 text-sm mb-4 line-clamp-3">
           {article.excerpt}
         </p>
-
-        {/* Meta Information */}
-        <div className="flex items-center justify-between text-xs text-text-secondary mb-4">
+        <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Icon name="User" size={14} />
@@ -45,35 +40,22 @@ const ArticleCard = ({ article }) => {
           </div>
           <span>{new Date(article.publishDate).toLocaleDateString('fr-FR')}</span>
         </div>
-
-        {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
           {article.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="bg-background text-text-secondary px-2 py-1 rounded-full text-xs font-medium border border-border"
+              className="bg-[#FFEB00] text-black px-2 py-1 rounded-full text-xs font-medium border border-black"
             >
               {tag}
             </span>
           ))}
-          {article.tags.length > 3 && (
-            <span className="text-text-secondary text-xs px-2 py-1">
-              +{article.tags.length - 3}
-            </span>
-          )}
         </div>
-
-        {/* Read More Link */}
         <Link
           to={`/article/${article.id}`}
-          className="inline-flex items-center space-x-2 text-primary hover:text-primary-600 font-medium text-sm transition-colors duration-300 group/link"
+          className="inline-flex items-center space-x-2 text-[#FF0000] hover:text-black font-medium text-sm"
         >
-          <span>Lire la suite</span>
-          <Icon 
-            name="ArrowRight" 
-            size={14} 
-            className="group-hover/link:translate-x-1 transition-transform duration-300" 
-          />
+          <span>Découvrir</span>
+          <Icon name="ArrowRight" size={14} />
         </Link>
       </div>
     </article>

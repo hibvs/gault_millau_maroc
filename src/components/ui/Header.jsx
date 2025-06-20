@@ -9,9 +9,9 @@ const Header = () => {
   const navigationItems = [
     { name: 'ACTUALITÉS', path: '/accueil-homepage', image: './public/assets/images/primaryIcons/news.png', bgColor: 'bg-[#FFE700]' },
     { name: 'RESTAURANTS', path: '/restaurants-discovery-hub', image: './public/assets/images/primaryIcons/restaurants.png', bgColor: 'bg-[#FFE700]' },
-    { name: 'ALCOOL', path: '/actualit-s-gastronomiques-editorial-hub', image: './public/assets/images/primaryIcons/wines.png', bgColor: 'bg-[#FFE700]' },
+    { name: 'ARTISANS', path: '/actualit-s-gastronomiques-editorial-hub', image: './public/assets/images/primaryIcons/artisans.png', bgColor: 'bg-[#FFE700]' },
     { name: 'HOTELS', path: '/guides-r-gionaux-regional-discovery', image: './public/assets/images/primaryIcons/hotels.png', bgColor: 'bg-[#FFE700]' },
-    { name: 'ARTISANS', path: '/critiques-notes-rating-system', image: './public/assets/images/primaryIcons/artisans.png', bgColor: 'bg-[#FFE700]' },
+    { name: 'ALCOOL', path: '/critiques-notes-rating-system', image: './public/assets/images/primaryIcons/wines.png', bgColor: 'bg-[#FFE700]' },
     { name: 'RIADS', path: '/v-nements-culinaires-events-calendar', image: './public/assets/images/primaryIcons/wineEstate.png', bgColor: 'bg-[#FFE700]' },
     { name: 'PEOPLE', path: '/v-nements-culinaires-events-calendar', image: './public/assets/images/primaryIcons/people.png', bgColor: 'bg-[#FFE700]' },
     { name: 'RECETTES', path: '/v-nements-culinaires-events-calendar', image: './public/assets/images/primaryIcons/Recipes.png', bgColor: 'bg-[#FFE700]' },
