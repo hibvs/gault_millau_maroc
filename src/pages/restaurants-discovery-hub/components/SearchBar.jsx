@@ -5,7 +5,7 @@ const SearchBar = ({ searchQuery, onSearchChange, onFilterToggle }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const quickFilters = [
-    { label: '4 Toques', value: 'rating:4', icon: 'Star' },
+    { label: '4 étoiles', value: 'rating:4', icon: 'Star' },
     { label: 'Marrakech', value: 'region:Marrakech', icon: 'MapPin' },
     { label: 'Terrasse', value: 'amenity:Terrasse', icon: 'Sun' },
     { label: 'Fruits de mer', value: 'cuisine:Fruits de Mer', icon: 'Fish' },

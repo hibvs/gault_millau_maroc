@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Icon from 'components/AppIcon';
 import Image from 'components/AppImage';
 
+const yellowColor = '#FFD700';
+
 const RestaurantCard = ({ restaurant, viewMode }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -12,11 +14,14 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
       <div className="flex items-center space-x-2">
         <div className="flex items-center">
           {[...Array(4)].map((_, i) => (
-            <Icon
+            <img
               key={i}
-              name="Star"
-              size={16}
-              className={`${i < restaurant.rating.toques ? 'text-secondary fill-current' : 'text-gray-300'}`}
+              src="/assets/images/toques/toque.png"
+              alt="toque"
+              className={`w-4 h-4 mr-1 ${
+                i < restaurant.rating.toques ? 'opacity-100' : 'opacity-30'
+              }`}
+              style={{ filter: `drop-shadow(0 0 1px black)` }} // optionnel
             />
           ))}
         </div>
@@ -36,13 +41,17 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
         {displayAmenities.map((amenity) => (
           <span
             key={amenity}
-            className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-accent-50 text-accent-700"
+            className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium"
+            style={{
+              backgroundColor: '#FFF8DC', // un jaune très clair (Cornsilk) pour le fond
+              color: '#B8860B', // un jaune foncé pour le texte
+            }}
           >
             {amenity}
           </span>
         ))}
         {remainingCount > 0 && (
-          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
+          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-800">
             +{remainingCount}
           </span>
         )}
@@ -60,9 +69,20 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
     console.log('Réservation pour:', restaurant.name);
   };
 
+  // Styles des boutons simplifiés (jaune #FFD700, rouge, blanc, noir)
+  const buttonStyles = {
+    primary: `bg-[${yellowColor}] hover:bg-[#e6c200] text-black`,
+    danger: 'bg-red-600 hover:bg-red-700 text-white',
+    white: 'bg-white hover:bg-gray-100 text-black border border-black',
+    black: 'bg-black hover:bg-gray-800 text-white',
+  };
+
+  // Comme Tailwind ne supporte pas les variables dynamiques dans les classes,
+  // on remplace par style inline dans les boutons jaunes :
+
   if (viewMode === 'list') {
     return (
-      <div className="bg-white rounded-lg shadow-warm hover:shadow-warm-lg transition-all duration-300 overflow-hidden">
+      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
         <div className="flex flex-col md:flex-row">
           {/* Image */}
           <div className="relative md:w-80 h-48 md:h-auto overflow-hidden">
@@ -79,12 +99,14 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
             )}
             <button
               onClick={handleFavoriteToggle}
-              className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-all duration-200"
+              className={`absolute top-3 right-3 p-2 rounded-full shadow-sm transition-colors duration-200 ${
+                isFavorite ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-white hover:bg-gray-100 text-black border border-black'
+              }`}
             >
               <Icon
                 name="Heart"
                 size={16}
-                className={isFavorite ? 'text-red-500 fill-current' : 'text-gray-400'}
+                className={isFavorite ? 'fill-current text-white' : 'text-black'}
               />
             </button>
           </div>
@@ -101,7 +123,7 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
                     <Icon name="MapPin" size={14} className="mr-1" />
                     {restaurant.region}
                   </span>
-                  <span className="font-medium text-primary">{restaurant.priceRange}</span>
+                  <span className="font-medium text-black">{restaurant.priceRange}</span>
                 </div>
               </div>
               {renderRating()}
@@ -117,7 +139,8 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
                 {restaurant.specialties.slice(0, 3).map((specialty, index) => (
                   <span
                     key={index}
-                    className="text-xs bg-secondary-50 text-secondary-700 px-2 py-1 rounded-full"
+                    className="text-xs px-2 py-1 rounded-full"
+                    style={{ backgroundColor: yellowColor, color: 'black' }}
                   >
                     {specialty}
                   </span>
@@ -125,9 +148,7 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
               </div>
             </div>
 
-            <div className="mb-4">
-              {renderAmenities(4)}
-            </div>
+            <div className="mb-4">{renderAmenities(4)}</div>
 
             <div className="flex items-center justify-between">
               <div className="text-sm text-text-secondary">
@@ -144,14 +165,15 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
               <div className="flex space-x-2">
                 <Link
                   to={`/restaurants-discovery-hub/${restaurant.id}`}
-                  className="px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-medium transition-all duration-300"
+                  className="bg-white hover:bg-gray-100 text-black border border-black px-4 py-2 rounded-lg text-sm font-medium text-center"
                 >
                   Voir détails
                 </Link>
                 {restaurant.reservationAvailable && (
                   <button
                     onClick={handleReservation}
-                    className="px-4 py-2 bg-accent hover:bg-accent-600 text-white rounded-lg text-sm font-medium transition-all duration-300"
+                    style={{ backgroundColor: yellowColor, color: 'black' }}
+                    className="px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#e6c200] transition-colors"
                   >
                     Réserver
                   </button>
@@ -166,7 +188,7 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
 
   // Grid view (default)
   return (
-    <div className="bg-white rounded-lg shadow-warm hover:shadow-warm-lg transition-all duration-300 overflow-hidden group">
+    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group">
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
         <Image
@@ -182,16 +204,21 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
         )}
         <button
           onClick={handleFavoriteToggle}
-          className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white rounded-full shadow-sm transition-all duration-200"
+          className={`absolute top-3 right-3 p-2 rounded-full shadow-sm transition-colors duration-200 ${
+            isFavorite ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-white hover:bg-gray-100 text-black border border-black'
+          }`}
         >
           <Icon
             name="Heart"
             size={16}
-            className={isFavorite ? 'text-red-500 fill-current' : 'text-gray-400'}
+            className={isFavorite ? 'fill-current text-white' : 'text-black'}
           />
         </button>
         <div className="absolute bottom-3 left-3">
-          <span className="bg-white/90 text-primary px-2 py-1 rounded-full text-sm font-medium">
+          <span
+            className="text-sm font-medium rounded-full px-2 py-1"
+            style={{ backgroundColor: yellowColor, color: 'black' }}
+          >
             {restaurant.priceRange}
           </span>
         </div>
@@ -212,9 +239,7 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
           {renderRating()}
         </div>
 
-        <p className="text-text-secondary text-sm mb-3 line-clamp-2">
-          {restaurant.cuisine}
-        </p>
+        <p className="text-text-secondary text-sm mb-3 line-clamp-2">{restaurant.cuisine}</p>
 
         <div className="mb-4">
           <div className="text-xs text-text-secondary mb-2">Spécialités:</div>
@@ -222,7 +247,8 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
             {restaurant.specialties.slice(0, 2).map((specialty, index) => (
               <span
                 key={index}
-                className="text-xs bg-secondary-50 text-secondary-700 px-2 py-1 rounded-full"
+                className="text-xs px-2 py-1 rounded-full"
+                style={{ backgroundColor: yellowColor, color: 'black' }}
               >
                 {specialty}
               </span>
@@ -230,25 +256,22 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
           </div>
         </div>
 
-        <div className="mb-4">
-          {renderAmenities(2)}
-        </div>
+        <div className="mb-4">{renderAmenities(2)}</div>
 
-        <div className="text-xs text-text-secondary mb-4 italic">
-          "{restaurant.criticExcerpt}"
-        </div>
+        <div className="text-xs text-text-secondary mb-4 italic">"{restaurant.criticExcerpt}"</div>
 
         <div className="flex space-x-2">
           <Link
             to={`/restaurants-discovery-hub/${restaurant.id}`}
-            className="flex-1 px-3 py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-medium transition-all duration-300 text-center"
+            className="bg-white hover:bg-gray-100 text-black border border-black flex-1 px-3 py-2 rounded-lg text-sm font-medium text-center"
           >
             Détails
           </Link>
           {restaurant.reservationAvailable && (
             <button
               onClick={handleReservation}
-              className="flex-1 px-3 py-2 bg-accent hover:bg-accent-600 text-white rounded-lg text-sm font-medium transition-all duration-300"
+              style={{ backgroundColor: yellowColor, color: 'black' }}
+              className="flex-1 px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#e6c200] transition-colors"
             >
               Réserver
             </button>

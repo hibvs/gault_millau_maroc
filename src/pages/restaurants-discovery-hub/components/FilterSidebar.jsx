@@ -26,21 +26,25 @@ const FilterSidebar = ({
     }
   };
 
-  const renderRatingStars = (rating) => {
-    return (
-      <div className="flex items-center space-x-1">
-        {[...Array(4)].map((_, i) => (
-          <Icon
-            key={i}
-            name="Star"
-            size={16}
-            className={`${i < rating ? 'text-secondary fill-current' : 'text-gray-300'}`}
-          />
-        ))}
-        <span className="text-sm text-text-secondary ml-2">{rating} toque{rating > 1 ? 's' : ''}</span>
-      </div>
-    );
-  };
+const renderRatingStars = (rating) => {
+  return (
+    <div className="flex items-center space-x-1">
+      {[...Array(4)].map((_, i) => (
+        <img
+          key={i}
+          src="./public/assets/images/toques/toque.png"  // adjust path accordingly
+          alt="toque"
+          className={`${i < rating ? 'opacity-100' : 'opacity-30'}`}
+          style={{ width: 16, height: 16 }}
+        />
+      ))}
+      <span className="text-sm text-text-secondary ml-2">
+        {rating} toque{rating > 1 ? 's' : ''}
+      </span>
+    </div>
+  );
+};
+
 
   return (
     <>

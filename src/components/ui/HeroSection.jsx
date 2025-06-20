@@ -1,4 +1,8 @@
+<<<<<<< HEAD
   import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> footer
 import { Link } from 'react-router-dom';
 import Icon from 'components/AppIcon';
 import Image from 'components/AppImage';
@@ -21,7 +25,11 @@ const HeroSection = () => {
       id: 2,
       image: "/assets/images/slide2.jpeg",
       title: "Tradition & Innovation",
+<<<<<<< HEAD
       subtitle: "Où l'art culinaire ancestral rencontre la créativité contemporaine",
+=======
+      subtitle: "Où l\\art culinaire ancestral rencontre la créativité contemporaine",
+>>>>>>> footer
       restaurant: "Dar Roumana",
       location: "Fès",
       rating: "17/20"

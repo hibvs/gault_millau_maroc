@@ -50,7 +50,7 @@ const RestaurantsDiscoveryHub = () => {
       name: "Le Foundouk",
       rating: { toques: 3, points: 15 },
       priceRange: "€€€",
-      region: "Marrakech",
+      region: "Tanger",
       cuisine: "Fusion Franco-Marocaine",
       image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
       description: `Niché dans un riad restauré de la médina, Le Foundouk propose une cuisine fusion inventive mêlant techniques françaises et saveurs marocaines. L'ambiance intimiste et la terrasse sur les toits offrent une expérience unique.`,
@@ -107,7 +107,7 @@ const RestaurantsDiscoveryHub = () => {
       name: "La Villa des Arts",
       rating: { toques: 3, points: 14 },
       priceRange: "€€",
-      region: "Rabat",
+      region: "Tetouan",
       cuisine: "Méditerranéenne",
       image: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=800&h=600&fit=crop",
       description: `Restaurant contemporain au cœur de Rabat, proposant une cuisine méditerranéenne créative avec des influences marocaines. L'art contemporain orne les murs de cette villa transformée en lieu gastronomique.`,
@@ -121,7 +121,7 @@ const RestaurantsDiscoveryHub = () => {
       id: 6,
       name: "Océan Vagabond",
       rating: { toques: 2, points: 12 },
-      priceRange: "€€",region: "Essaouira",cuisine: "Fruits de Mer",image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop",
+      priceRange: "€€",region: "Agadir",cuisine: "Fruits de Mer",image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop",
       description: `Face à l'océan Atlantique, ce restaurant de fruits de mer propose les prises du jour dans une ambiance décontractée. La fraîcheur des produits et la vue imprenable font de chaque repas un moment privilégié.`,
       specialties: ["Plateau de fruits de mer", "Tajine de poisson", "Sardines grillées"],
       amenities: ["Vue océan", "Terrasse", "Ambiance décontractée"],
@@ -131,7 +131,7 @@ const RestaurantsDiscoveryHub = () => {
     }
   ];
 
-  const regions = ["Marrakech", "Casablanca", "Fès", "Rabat", "Essaouira", "Agadir", "Tanger"];
+  const regions = ["Marrakech", "Casablanca", "Fès", "Tetouan","Agadir", "Tanger"];
   const cuisineTypes = ["Gastronomie Marocaine Moderne", "Fusion Franco-Marocaine", "Internationale", "Cuisine Impériale", "Méditerranéenne", "Fruits de Mer"];
   const priceRanges = ["€", "€€", "€€€", "€€€€"];
   const amenityOptions = ["Terrasse", "Cave à vin", "Parking", "Table du chef", "Piano bar", "Vue océan", "Hammam", "Galerie d'art"];
