@@ -164,10 +164,10 @@ const ActualitesGastronomiquesEditorialHub = () => {
               </div>
             </div>
             <h1 className="font-serif text-4xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
-              Actualités Gastronomiques
+              L’Artisanat Marocain : Tradition et Excellence
             </h1>
             <p className="text-xl lg:text-2xl text-text-secondary mb-8 leading-relaxed">
-              L'actualité culinaire marocaine par les experts de Gault et Millau
+              L’art et la passion au service d’une culture riche et authentique.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-text-secondary">
               <div className="flex items-center space-x-2">
