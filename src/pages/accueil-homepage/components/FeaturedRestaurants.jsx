@@ -27,7 +27,7 @@ const FeaturedRestaurants = () => {
     },
     {
       id: 3,
-      name: "Le Cabestan",chef: "Chef Issam Rhachi",location: "Casablanca",rating: "16/20",image: "https://images.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_1280.jpg?w=800&h=600&fit=crop",cuisine: "Méditerranéenne",priceRange: "€€€",
+      name: "Le Cabestan",chef: "Chef Issam Rhachi",location: "Casablanca",rating: "16/20",image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/62/fa/ea/lounge-cabestan.jpg?w=900&h=500&s=1",cuisine: "Méditerranéenne",priceRange: "€€€",
       description: `Surplombant l'océan Atlantique, ce restaurant emblématique propose une cuisine méditerranéenne raffinée mettant à l'honneur les produits de la mer. L'ambiance élégante et la vue imprenable en font une adresse incontournable de Casablanca.`,
       specialties: ["Fruits de mer frais", "Paella royale", "Poisson du jour grillé"],
       features: ["Vue sur océan", "Terrasse", "Bar lounge", "Voiturier"]
@@ -38,14 +38,16 @@ const FeaturedRestaurants = () => {
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-600 rounded-full flex items-center justify-center mr-4">
-              <Icon name="Star" size={24} className="text-white" />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-text-primary">
-              Restaurants Étoilés
-            </h2>
-          </div>
+
+      <div className="flex items-center justify-center mb-6">
+       <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-600 rounded-full flex items-center justify-center mr-4">
+    <img src="/assets/images/toques/toque.png" alt="Toque" className="w-6 h-6 object-contain" />
+    </div>
+    <h2 className="text-4xl lg:text-5xl font-serif font-bold text-text-primary">
+    Restaurants toqués 
+    </h2>
+</div>
+
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Découvrez notre sélection des meilleures tables du Maroc, évaluées par nos critiques gastronomiques selon les standards Gault & Millau
           </p>

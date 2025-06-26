@@ -16,72 +16,122 @@ const GuidesRegionauxRegionalDiscovery = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const regions = [
-    {
-      id: 'marrakech',
-      name: 'Marrakech',
-      title: 'La Perle du Sud',
-      description: `Marrakech offre une expérience culinaire unique où les traditions berbères rencontrent l'innovation contemporaine. Des riads intimistes aux restaurants de luxe, la ville rouge propose une palette gastronomique exceptionnelle.Les souks regorgent d'épices authentiques et de produits locaux, tandis que les chefs internationaux réinventent la cuisine marocaine dans des cadres somptueux.`,
-      image: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&h=600&fit=crop',
-      restaurantCount: 127,
-      specialties: ['Tagine aux olives', 'Pastilla au pigeon', 'Couscous royal', 'Méchoui'],
-      atmosphere: 'Exotique et raffinée',
-      priceRange: '€€€',
-      highlights: [
-        'Dining dans les riads historiques',
-        'Terrasses avec vue sur l\'Atlas',
-        'Cuisine fusion franco-marocaine',
-        'Expériences culinaires authentiques'
-      ],
-      bestTime: 'Octobre à Avril',
-      culturalNotes: `Marrakech est le carrefour des influences culinaires berbères, arabes et françaises. La ville a développé une identité gastronomique unique qui respecte les traditions tout en embrassant l'innovation.`
-    },
-    {
-      id: 'casablanca',name: 'Casablanca',title: 'Métropole Cosmopolite',description: `Casablanca, capitale économique du Maroc, offre une scène culinaire cosmopolite où se mélangent influences internationales et traditions locales. La ville blanche séduit par sa modernité et son ouverture sur le monde.Des brasseries françaises aux restaurants de fruits de mer en bord d'océan, Casablanca propose une diversité gastronomique remarquable.`,
-      image: 'https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=800&h=600&fit=crop',
-      restaurantCount: 89,
-      specialties: ['Fruits de mer grillés', 'Pastilla au poisson', 'Harira moderne', 'Pâtisseries françaises'],
-      atmosphere: 'Moderne et internationale',
-      priceRange: '€€€€',
-      highlights: [
-        'Restaurants en bord de mer',
-        'Cuisine internationale haut de gamme',
-        'Bars à cocktails sophistiqués',
-        'Brunchs cosmopolites'
-      ],
-      bestTime: 'Toute l\'année',
-      culturalNotes: `Casablanca représente le Maroc moderne et ouvert. Sa gastronomie reflète cette diversité avec des influences françaises, espagnoles et internationales qui enrichissent la cuisine traditionnelle marocaine.`
-    },
-    {
-      id: 'fez',
-      name: 'Fès',
-      title: 'Capitale Spirituelle',
-      description: `Fès, ancienne capitale impériale, préserve jalousement les traditions culinaires les plus authentiques du Maroc. La médina millénaire abrite des secrets gastronomiques transmis de génération en génération.
-      
-Les maîtres cuisiniers de Fès perpétuent un art culinaire raffiné, symbole de l'hospitalité marocaine et de la richesse culturelle du royaume.`,image: 'https://images.unsplash.com/photo-1570547490101-12ad11e1e19e?w=800&h=600&fit=crop',
-      restaurantCount: 64,
-      specialties: ['Pastilla traditionnelle', 'Couscous aux sept légumes', 'Rfissa', 'Chebakia'],
-      atmosphere: 'Traditionnelle et authentique',priceRange: '€€',
-      highlights: [
-        'Cuisine impériale authentique','Restaurants dans la médina','Ateliers de cuisine traditionnelle','Pâtisseries artisanales'
-      ],
-      bestTime: 'Mars à Mai, Septembre à Novembre',
-      culturalNotes: `Fès est considérée comme le berceau de la haute cuisine marocaine. Les recettes impériales y sont préservées avec un soin particulier, faisant de la ville un véritable conservatoire gastronomique.`
-    },
-    {
-      id: 'rabat',name: 'Rabat',title: 'Élégance Contemporaine',description: `Rabat, capitale administrative du royaume, développe une scène culinaire contemporaine qui allie élégance et innovation. La ville offre une approche moderne de la gastronomie marocaine.Entre tradition et modernité, Rabat séduit par ses restaurants raffinés et sa nouvelle génération de chefs qui réinventent les classiques.`,image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-      restaurantCount: 52,
-      specialties: ['Cuisine fusion', 'Poissons de l\'Atlantique', 'Tajines revisités', 'Desserts modernes'],
-      atmosphere: 'Élégante et contemporaine',
-      priceRange: '€€€',
-      highlights: [
-        'Restaurants design contemporain',
-        'Cuisine créative marocaine',
-        'Terrasses avec vue sur l\'océan',
-        'Expériences gastronomiques innovantes'
-      ],
-      bestTime: 'Avril à Juin, Septembre à Novembre',
-      culturalNotes: `Rabat représente le nouveau visage de la gastronomie marocaine. La ville encourage l'innovation culinaire tout en respectant les traditions, créant une identité gastronomique unique.`
-    }
+
+  {
+    id: 'marrakech',
+    name: 'Marrakech',
+    title: 'La Ville Rouge',
+    description: `Marrakech vous invite à séjourner dans des hôtels alliant charme traditionnel et confort moderne. Des riads authentiques aux établissements de luxe, chaque hébergement offre une immersion unique dans l’art de vivre marocain, au cœur de la ville rouge.`,
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/fe/c4/81/hotel-entrance.jpg?w=1000&h=-1&s=1',
+    hotelCount: 127,
+    specialties: ['Riads traditionnels', 'Hôtels de charme', 'Palaces luxueux', 'Maisons d’hôtes authentiques'],
+    atmosphere: 'Exotique et raffinée',
+    priceRange: '€€€',
+    highlights: [
+      'Séjour dans des riads historiques',
+      'Terrasses avec vue sur l\'Atlas',
+      'Hébergements alliant tradition et modernité',
+      'Expériences authentiques de l’hospitalité marocaine'
+    ],
+    bestTime: 'Octobre à Avril',
+    culturalNotes: `Marrakech est un carrefour d’influences culturelles et architecturales, offrant une hospitalité chaleureuse où le luxe traditionnel côtoie le confort contemporain.`
+  },
+  {
+    id: 'casablanca',
+    name: 'Casablanca',
+    title: 'Métropole Cosmopolite',
+    description: `Casablanca, capitale économique du Maroc, offre une scène hôtelière cosmopolite où modernité et luxe se côtoient. Des hôtels modernes en bord d’océan aux établissements design en centre-ville, Casablanca séduit par sa diversité et son confort haut de gamme.`,
+    image: 'https://www.kayak.fr/rimg/himg/8d/4a/a4/expedia_group-194632-252514644-821362.jpg?width=836&height=607&crop=true',
+    hotelCount: 89,
+    specialties: ['Hôtels en bord de mer', 'Palaces modernes', 'Boutique-hôtels design', 'Appartements de luxe'],
+    atmosphere: 'Moderne et internationale',
+    priceRange: '€€€€',
+    highlights: [
+      'Hôtels avec vue sur l\'Atlantique',
+      'Espaces contemporains et confort haut de gamme',
+      'Bars et lounges sophistiqués',
+      'Services premium et expériences personnalisées'
+    ],
+    bestTime: 'Toute l\'année',
+    culturalNotes: `Casablanca reflète la modernité marocaine avec une offre hôtelière riche en diversité, combinant hospitalité internationale et charme local.`
+  },
+  {
+    id: 'fez',
+    name: 'Fès',
+    title: 'Capitale Spirituelle',
+    description: `Fès vous invite à découvrir des hébergements où l’authenticité et la tradition sont au cœur de l’expérience. Des maisons d’hôtes nichées dans la médina aux hôtels historiques, chaque séjour offre un voyage dans le temps et la culture marocaine.`,
+    image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/65290037.jpg?k=7d1defc26aec2d988a7830caaea0505c2cb8931ea729c5e496fb1a9314baddd7&o=&hp=1',
+    hotelCount: 64,
+    specialties: ['Maisons d’hôtes traditionnelles', 'Hôtels au cœur de la médina', 'Riad avec patios intérieurs', 'Hébergements artisanaux'],
+    atmosphere: 'Traditionnelle et authentique',
+    priceRange: '€€',
+    highlights: [
+      'Séjours dans des palais restaurés',
+      'Décors authentiques et artisanaux',
+      'Proximité des sites historiques',
+      'Hospitalité marocaine légendaire'
+    ],
+    bestTime: 'Mars à Mai, Septembre à Novembre',
+    culturalNotes: `Fès est un véritable conservatoire culturel, où l’hôtellerie traditionnelle met en valeur l’artisanat local et la richesse du patrimoine marocain.`
+  },
+  {
+    id: 'rabat',
+    name: 'Rabat',
+    title: 'Élégance Contemporaine',
+    description: `Rabat propose une offre hôtelière contemporaine qui allie élégance et innovation. Entre hôtels design, établissements modernes et maisons d’hôtes sophistiquées, la ville conjugue confort moderne et raffinement.`,
+    image: 'https://www.momondo.fr/kimg/0c/22/0f3dd385-5f0eeb9a-40.jpeg',
+    hotelCount: 52,
+    specialties: ['Hôtels design', 'Établissements modernes', 'Maisons d’hôtes élégantes', 'Hôtels avec vue sur l’océan'],
+    atmosphere: 'Élégante et contemporaine',
+    priceRange: '€€€',
+    highlights: [
+      'Espaces contemporains et confort haut de gamme',
+      'Terrasses panoramiques sur l’océan',
+      'Hospitalité moderne et personnalisée',
+      'Proximité des quartiers culturels'
+    ],
+    bestTime: 'Avril à Juin, Septembre à Novembre',
+    culturalNotes: `Rabat symbolise le Maroc moderne avec une scène hôtelière innovante qui respecte les traditions tout en apportant une touche de modernité.`
+  },
+
+  {
+    id: 'agadir',
+    name: 'Agadir',
+    title: 'La Perle de l’Atlantique',
+    description: `Agadir est une destination balnéaire prisée où les hôtels modernes et les resorts de luxe offrent détente et confort face à l’océan Atlantique. Son climat doux toute l’année en fait un lieu idéal pour un séjour alliant plage et bien-être.`,
+    image: 'https://www.riu.com/fr/binaris/playa-beach-01_tcm57-141013.jpg?v=tm211124_1637',
+    hotelCount: 78,
+    specialties: ['Resorts en bord de plage', 'Hôtels spa et bien-être', 'Établissements familiaux', 'Villages vacances'],
+    atmosphere: 'Décontractée et ensoleillée',
+    priceRange: '€€€',
+    highlights: [
+      'Plages de sable fin à proximité',
+      'Centres de bien-être et spas',
+      'Hébergements avec piscines et activités nautiques',
+      'Ambiance conviviale et relaxante'
+    ],
+    bestTime: 'Toute l\'année',
+    culturalNotes: `Agadir combine modernité et nature, avec une hôtellerie tournée vers la détente et les loisirs, idéale pour les amoureux de la mer et du soleil.`
+  },
+  {
+    id: 'tetouan',
+    name: 'Tétouan',
+    title: 'La Ville Blanche',
+    description: `Tétouan charme par ses hôtels de caractère nichés entre mer et montagnes. L’hospitalité locale se révèle dans des hébergements mêlant architecture andalouse et confort contemporain, parfaits pour explorer la richesse culturelle de la région.`,
+    image: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/257897248.jpg?k=29338993f2b99be225b964dcda833358ace041cdb856436a8d876357c32df045&o=&hp=1',
+    hotelCount: 45,
+    specialties: ['Maisons d’hôtes andalouses', 'Hôtels au charme historique', 'Établissements avec vue sur la mer', 'Séjours culturels'],
+    atmosphere: 'Authentique et paisible',
+    priceRange: '€€',
+    highlights: [
+      'Hébergements typiques dans la médina',
+      'Ambiance tranquille entre mer et montagne',
+      'Proximité des sites historiques et naturels',
+      'Accueil chaleureux et personnalisé'
+    ],
+    bestTime: 'Printemps et automne',
+    culturalNotes: `Tétouan est un joyau architectural où l’hôtellerie locale reflète le mélange des influences méditerranéennes et marocaines dans un cadre paisible.`
+  }
   ];
 
   const featuredExperiences = [

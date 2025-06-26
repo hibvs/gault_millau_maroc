@@ -20,7 +20,9 @@ const SeasonalRecommendations = ({ selectedRegion }) => {
       highlights: [
         'Légumes primeurs et herbes fraîches',
         'Terrasses et jardins en fleurs',
-        'Festivals gastronomiques de printemps',
+        'Festivals gastronomiques de printemps', 
+
+        
         'Produits de la mer en abondance'
       ],
       dishes: [

@@ -12,7 +12,7 @@ const HeroSection = () => {
       id: 1,
       image: "/assets/images/slide1.jpeg",
       title: "L'Excellence Culinaire Marocaine",
-      subtitle: "Découvrez les restaurants d\\exception sélectionnés par nos critiques",
+      subtitle: "Découvrez les restaurants d'exception sélectionnés par nos critiques",
       restaurant: "La Mamounia",
       location: "Marrakech",
       rating: "18/20"
@@ -20,8 +20,8 @@ const HeroSection = () => {
     {
       id: 2,
       image: "/assets/images/slide2.jpeg",
-      title: "Tradition & Innovation",
-      subtitle: "Où l\\art culinaire ancestral rencontre la créativité contemporaine",
+      title: "Tradition et Innovation",
+      subtitle: "Où l'art culinaire ancestral rencontre la créativité contemporaine",
       restaurant: "Dar Roumana",
       location: "Fès",
       rating: "17/20"

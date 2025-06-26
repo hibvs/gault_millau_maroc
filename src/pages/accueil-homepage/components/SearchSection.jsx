@@ -152,25 +152,34 @@ const SearchSection = () => {
           </div>
         </div>
 
-        {/* Quick Filters */}
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {[
-            { label: 'Restaurants Étoilés', icon: 'Star' },
-            { label: 'Terrasse', icon: 'Sun' },
-            { label: 'Vue Panoramique', icon: 'Eye' },
-            { label: 'Cuisine Ouverte', icon: 'ChefHat' },
-            { label: 'Parking', icon: 'Car' },
-            { label: 'Accessible PMR', icon: 'Accessibility' }
-          ].map((filter) => (
-            <button
-              key={filter.label}
-              className="flex items-center px-4 py-2 bg-white hover:bg-primary-50 border border-border hover:border-primary text-text-secondary hover:text-primary rounded-full text-sm font-medium transition-all duration-300"
-            >
-              <Icon name={filter.icon} size={16} className="mr-2" />
-              {filter.label}
-            </button>
-          ))}
-        </div>
+  {/* Quick Filters */}
+<div className="mt-8 flex flex-wrap justify-center gap-3">
+  {[
+    { label: 'Restaurants Toqués', icon: 'Star' },
+    { label: 'Terrasse', icon: 'Sun' },
+    { label: 'Vue Panoramique', icon: 'Eye' },
+    { label: 'Cuisine Ouverte', icon: 'ChefHat' },
+    { label: 'Parking', icon: 'Car' },
+    { label: 'Accessible PMR', icon: 'Accessibility' }
+  ].map((filter) => (
+    <button
+      key={filter.label}
+      className="flex items-center px-4 py-2 bg-white hover:bg-primary-50 border border-border hover:border-primary text-text-secondary hover:text-primary rounded-full text-sm font-medium transition-all duration-300"
+    >
+      {filter.icon === 'Star' ? (
+        <img
+          src="/assets/images/toques/toque.png"
+          alt="Toque"
+          className="w-4 h-4 mr-2 object-contain"
+        />
+      ) : (
+        <Icon name={filter.icon} size={16} className="mr-2" />
+      )}
+      {filter.label}
+    </button>
+  ))}
+</div>
+
       </div>
     </section>
   );

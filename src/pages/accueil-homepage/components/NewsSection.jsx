@@ -4,48 +4,49 @@ import Icon from 'components/AppIcon';
 import Image from 'components/AppImage';
 
 const NewsSection = () => {
-  const newsArticles = [
-    {
-      id: 1,
-      title: "L\'Art de la Pastilla Revisité par les Chefs Contemporains",
-      excerpt: `Découvrez comment les grands chefs marocains réinventent ce plat emblématique en y apportant leur touche personnelle tout en respectant les traditions ancestrales. Une exploration culinaire fascinante entre heritage et innovation.`,
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop",
-      author: "Fatima Zahra Benali",
-      date: "15 Décembre 2024",
-      category: "Tradition & Innovation",
-      readTime: "5 min"
-    },
-    {
-      id: 2,
-      title: "Ouverture Exceptionnelle : Le Jardin Secret à Fès",
-      excerpt: `Le nouveau restaurant du Chef Youssef Akram ouvre ses portes dans un riad du 18ème siècle entièrement restauré. Une cuisine marocaine raffinée dans un cadre d'exception qui promet de redéfinir la gastronomie fassi.`,
-      image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?w=600&h=400&fit=crop",
-      author: "Mohammed Tazi",
-      date: "12 Décembre 2024",
-      category: "Ouvertures",
-      readTime: "3 min"
-    },
-    {
-      id: 3,
-      title: "Les Vins Marocains à l\'Honneur : Rencontre avec les Vignerons",
-      excerpt: `Portrait des vignerons qui font rayonner le terroir marocain à l'international. De Meknès aux coteaux de l'Atlas, découvrez les cépages qui accompagnent parfaitement notre gastronomie nationale.`,
-      image: "https://images.pixabay.com/photo/2016/10/22/20/34/wine-1761613_1280.jpg?w=600&h=400&fit=crop",
-      author: "Aicha Bennani",
-      date: "10 Décembre 2024",
-      category: "Vins & Accords",
-      readTime: "7 min"
-    },
-    {
-      id: 4,
-      title: "Festival Gastronomique de Marrakech : Bilan d\'une Édition Exceptionnelle",
-      excerpt: `Retour sur les temps forts du festival qui a réuni les plus grands chefs du royaume et d'ailleurs. Démonstrations, dégustations et rencontres ont marqué cette édition dédiée aux saveurs d'exception.`,
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop",
-      author: "Karim Alaoui",
-      date: "8 Décembre 2024",
-      category: "Événements",
-      readTime: "4 min"
-    }
-  ];
+const newsArticles = [
+  {
+    id: 1,
+    title: "Tajine à la Truffe : Quand la Tradition Rencontre le Luxe",
+    excerpt: `Un jeune chef casablancais marie truffe noire et tajine de veau pour séduire les gastronomes en quête d'excellence. Une réinterprétation audacieuse du plat emblématique.`,
+    image: "https://img.fourchette-et-bikini.fr/660x495/2025/02/21/i50764-tajine-minceur.jpg",
+    author: "Samira Lahlou",
+    date: "10 Juin 2025",
+    category: "Tradition & Innovation",
+    readTime: "6 min"
+  },
+  {
+    id: 2,
+    title: "Ouverture : La Table du Riad Yasmina à Marrakech",
+    excerpt: `Un nouveau joyau culinaire s’installe dans la médina. Le chef Mehdi Bouzid y propose une cuisine marocaine revisitée dans un décor intimiste.`,
+    image: "https://www.riad-yasmine.com/wp-content/uploads/2018/02/PATIO-1024x664.jpg",
+    author: "Omar Hachem",
+    date: "6 Juin 2025",
+    category: "Ouvertures",
+    readTime: "4 min"
+  },
+  {
+    id: 3,
+    title: "Rencontre avec les Vignerons de Benslimane",
+    excerpt: `Découverte du domaine Ouled Thaleb et de ses cépages marocains qui conquièrent les grandes tables de Paris et Casablanca.`,
+    image: "https://media-viniou.s3.eu-west-3.amazonaws.com/image-region/vins/maroc/benslimane-800x256.png",
+    author: "Salma Berrada",
+    date: "3 Juin 2025",
+    category: "Vins & Accords",
+    readTime: "5 min"
+  },
+  {
+    id: 4,
+    title: "Retour sur le Festival Saveurs du Sud à Agadir",
+    excerpt: `Le grand rendez-vous des gourmets au sud du royaume a réuni producteurs, chefs étoilés et artisans du goût pour célébrer les produits locaux.`,
+    image: "https://premiumtravelnews.com/wp-content/uploads/2024/04/IMG_7039.jpeg",
+    author: "Yasmine Amrani",
+    date: "1 Juin 2025",
+    category: "Événements",
+    readTime: "3 min"
+  }
+];
+
 
   const categories = [
     { name: "Tradition & Innovation", color: "bg-primary" },

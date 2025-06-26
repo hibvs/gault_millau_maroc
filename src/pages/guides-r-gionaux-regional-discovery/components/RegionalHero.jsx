@@ -24,20 +24,20 @@ const RegionalHero = () => {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
-              Découvrez le Maroc
-              <span className="block text-secondary">Gastronomique</span>
+             L’Art de Séjourner  
+              <span className="block text-secondary">au Maroc</span>
             </h1>
             
             <p className="text-xl text-primary-100 mb-8 leading-relaxed">
-              Explorez les richesses culinaires de chaque région marocaine à travers nos guides experts. 
-              De Marrakech à Casablanca, de Fès à Rabat, découvrez les saveurs authentiques et les 
-              adresses d'exception qui font la réputation gastronomique du royaume.
+             Découvrez l'hospitalité marocaine dans toute sa splendeur
+             Partez à la découverte des plus beaux hôtels du royaume, sélectionnés pour leur raffinement, 
+              leur service irréprochable et leur cadre exceptionnel. 
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <div className="flex items-center space-x-3 text-primary-100">
                 <div className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
-                  <Icon name="Star" size={16} className="text-secondary" />
+                  <img src="./public/assets/images/toques/TOQUES_2023_JAUNE.png" alt="Toque de chef" className="w-4 h-4 object-contain text-secondary" />
                 </div>
                 <span className="font-medium">Sélection Gault & Millau</span>
               </div>
@@ -45,26 +45,17 @@ const RegionalHero = () => {
                 <div className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
                   <Icon name="MapPin" size={16} className="text-secondary" />
                 </div>
-                <span className="font-medium">4 Régions Principales</span>
+                <span className="font-medium">3 Régions Principales</span>
               </div>
               <div className="flex items-center space-x-3 text-primary-100">
                 <div className="w-8 h-8 bg-secondary/20 rounded-full flex items-center justify-center">
-                  <Icon name="UtensilsCrossed" size={16} className="text-secondary" />
+                  <Icon name="Hotel" size={16} className="text-secondary" />
                 </div>
-                <span className="font-medium">332+ Restaurants</span>
+                <span className="font-medium">332+ Hôtels</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-secondary hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-warm transform hover:scale-105 flex items-center justify-center space-x-2">
-                <Icon name="Compass" size={20} />
-                <span>Commencer l'Exploration</span>
-              </button>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2">
-                <Icon name="Download" size={20} />
-                <span>Guide PDF</span>
-              </button>
-            </div>
+
           </div>
 
           {/* Visual */}
@@ -73,7 +64,7 @@ const RegionalHero = () => {
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-warm-lg transform rotate-3 hover:rotate-0 transition-transform duration-500">
                   <Image
-                    src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=300&h=400&fit=crop"
+                    src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/474656748.jpg?k=3f511d8a7de370ec912d62ffc0f9666b0995d5a97b556a81b2492a07d2ae84af&o=&hp=1"
                     alt="Marrakech cuisine"
                     className="w-full h-48 object-cover"
                   />
@@ -83,7 +74,7 @@ const RegionalHero = () => {
                 </div>
                 <div className="relative overflow-hidden rounded-2xl shadow-warm-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500">
                   <Image
-                    src="https://images.unsplash.com/photo-1570547490101-12ad11e1e19e?w=300&h=300&fit=crop"
+                    src="https://www.placesofjuma.com/wp-content/uploads/2024/02/Riad-Maison-Bleue-and-Spa-9.0-2.jpg"
                     alt="Fès traditional"
                     className="w-full h-36 object-cover"
                   />
@@ -95,7 +86,7 @@ const RegionalHero = () => {
               <div className="space-y-4 mt-8">
                 <div className="relative overflow-hidden rounded-2xl shadow-warm-lg transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                   <Image
-                    src="https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=300&h=300&fit=crop"
+                    src="https://www.royalmansour.com/wp-content/uploads/2024/07/casa-c2-lobby.jpg"
                     alt="Casablanca modern"
                     className="w-full h-36 object-cover"
                   />
@@ -105,7 +96,7 @@ const RegionalHero = () => {
                 </div>
                 <div className="relative overflow-hidden rounded-2xl shadow-warm-lg transform rotate-2 hover:rotate-0 transition-transform duration-500">
                   <Image
-                    src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop"
+                    src="https://y.cdrst.com/foto/hotel-sf/39bf/listcardm/sofitel-rabat-jardin-des-roses-servicios-1209717a.jpg"
                     alt="Rabat contemporary"
                     className="w-full h-48 object-cover"
                   />
@@ -123,14 +114,7 @@ const RegionalHero = () => {
         </div>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 fill-background">
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
-          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
-          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
-        </svg>
-      </div>
+
     </div>
   );
 };
