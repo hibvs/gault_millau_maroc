@@ -300,59 +300,7 @@ const GuidesRegionauxRegionalDiscovery = () => {
               <CulturalContext region={filteredRegions[0]} />
             )}
 
-            {/* Featured Experiences */}
-            <div className="bg-surface rounded-2xl p-8 shadow-warm">
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <h2 className="text-2xl font-serif font-bold text-text-primary mb-2">
-                    Expériences Culinaires
-                  </h2>
-                  <p className="text-text-secondary">
-                    Découvrez les saveurs authentiques à travers des expériences uniques
-                  </p>
-                </div>
-                <Link
-                  to="/v-nements-culinaires-events-calendar"
-                  className="text-primary hover:text-primary-600 font-medium text-sm flex items-center space-x-1 transition-colors duration-300"
-                >
-                  <span>Voir tous les événements</span>
-                  <Icon name="ArrowRight" size={16} />
-                </Link>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {filteredExperiences.map((experience) => (
-                  <div key={experience.id} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-xl mb-4">
-                      <Image
-                        src={experience.image}
-                        alt={experience.title}
-                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <span className="text-sm font-semibold text-primary">{experience.price}</span>
-                      </div>
-                    </div>
-                    <h3 className="font-serif font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">
-                      {experience.title}
-                    </h3>
-                    <p className="text-sm text-text-secondary mb-3 line-clamp-2">
-                      {experience.description}
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-text-secondary">
-                      <div className="flex items-center space-x-1">
-                        <Icon name="Clock" size={14} />
-                        <span>{experience.duration}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Icon name="MapPin" size={14} />
-                        <span className="capitalize">{regions.find(r => r.id === experience.region)?.name}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             {/* Seasonal Recommendations */}
             <SeasonalRecommendations selectedRegion={selectedRegion} />
@@ -383,58 +331,94 @@ const GuidesRegionauxRegionalDiscovery = () => {
               to="/v-nements-culinaires-events-calendar"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-lg font-semibold transition-all duration-300"
             >
-              Voir les Événements
+              Voir les Riads
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-text-primary text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-800 rounded-lg flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl font-bold">Gault & Millau Maroc</h3>
-                  <p className="text-sm text-gray-400">Excellence Culinaire</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Votre guide de référence pour découvrir l'excellence gastronomique marocaine.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Navigation</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/accueil-homepage" className="text-gray-300 hover:text-white transition-colors duration-300">Accueil</Link></li>
-                <li><Link to="/restaurants-discovery-hub" className="text-gray-300 hover:text-white transition-colors duration-300">Restaurants</Link></li>
-                <li><Link to="/actualit-s-gastronomiques-editorial-hub" className="text-gray-300 hover:text-white transition-colors duration-300">Actualités</Link></li>
-                <li><Link to="/critiques-notes-rating-system" className="text-gray-300 hover:text-white transition-colors duration-300">Critiques</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>contact@gaultmillau.ma</li>
-                <li>+212 5XX-XXXXXX</li>
-                <li>Casablanca, Maroc</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Gault & Millau Maroc. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+   
+<footer className="bg-white text-black border-t border-yellow-500 py-12">
+  <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    {/* Logo + liens légaux */}
+    <div>
+      <Link to="/accueil-homepage" className="inline-block mb-4">
+        <img 
+          src="/assets/images/Logo-Gault&Millau-NOIR_V.png" 
+          alt="Gault & Millau Maroc Logo"
+          className="w-36 h-auto"
+        />
+      </Link>
+      <nav className="flex flex-col space-y-1 text-sm text-gray-600">
+        <Link to="/a-propos" className="hover:underline">A propos</Link>
+        <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link>
+        <Link to="/cgu" className="hover:underline">CGU</Link>
+        <Link to="/politique-confidentialite" className="hover:underline">Politique de confidentialité</Link>
+      </nav>
+    </div>
+
+    {/* Notre sélection */}
+    <div>
+      <h3 className="font-semibold mb-3 uppercase text-sm">NOTRE SÉLECTION</h3>
+      <nav className="flex flex-col space-y-1 text-sm text-gray-600">
+        <Link to="/restaurants" className="hover:underline">Restaurants</Link>
+        <Link to="/vins" className="hover:underline">Vins</Link>
+        <Link to="/champagnes" className="hover:underline">Champagnes</Link>
+        <Link to="/spiritueux" className="hover:underline">Spiritueux</Link>
+        <Link to="/domaines" className="hover:underline">Domaines</Link>
+        <Link to="/hotels" className="hover:underline">Hôtels</Link>
+        <Link to="/artisans" className="hover:underline">Artisans</Link>
+      </nav>
+    </div>
+
+    {/* Contact */}
+    <div>
+      <h3 className="font-semibold mb-3 uppercase text-sm">CONTACT</h3>
+      <address className="not-italic text-gray-600 text-sm space-y-1">
+        <div>37-39 rue Boissière</div>
+        <div>75016 Paris</div>
+        <div>France</div>
+        <div>Appeler : <a href="tel:0141409980" className="hover:underline">01 41 40 99 80</a></div>
+        <div><Link to="/contact" className="hover:underline">Contactez-nous</Link></div>
+      </address>
+    </div>
+
+    {/* Réseaux sociaux + newsletter */}
+    <div className="flex flex-col items-start justify-between">
+      <div className="flex space-x-4 mb-6">
+        <a href="#" aria-label="Facebook" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="Facebook" size={24} />
+        </a>
+        <a href="#" aria-label="Instagram" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="Instagram" size={24} />
+        </a>
+        <a href="#" aria-label="X (ex Twitter)" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="X" size={24} />
+        </a>
+        <a href="#" aria-label="LinkedIn" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="Linkedin" size={24} />
+        </a>
+        <a href="#" aria-label="TikTok" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="TikTok" size={24} />
+        </a>
+      </div>
+
+      <div className="text-xs text-gray-500 italic mb-4">
+        Inscrivez-vous à notre newsletter <br />
+        <Link to="/newsletters" className="hover:underline">Toutes les newsletters</Link>
+      </div>
+
+      <div className="text-xs text-gray-500 italic text-center w-full">
+        GaultMillau © {new Date().getFullYear()} <br />
+        <span className="not-italic">Tous droits réservés</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
     </div>
   );
 };

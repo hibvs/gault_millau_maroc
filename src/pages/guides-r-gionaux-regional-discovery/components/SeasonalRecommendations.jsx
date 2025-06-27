@@ -29,19 +29,19 @@ const SeasonalRecommendations = ({ selectedRegion }) => {
         {
           name: 'Salade Marocaine aux Herbes Fraîches',
           description: 'Mélange de coriandre, persil et menthe avec légumes croquants',
-          image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop',
+          image: 'https://resize.elle.fr/original/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/salade-marocaine-2711399/47700736-1-fre-FR/Salade-marocaine.jpg',
           regions: ['all']
         },
         {
           name: 'Tagine aux Petits Pois et Artichauts',
           description: 'Légumes de saison mijotés aux épices douces',
-          image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop',
+          image: 'https://www.auxdelicesdupalais.net/wp-content/uploads/2016/06/Tajine-aux-petits-pois-artichaut-et-fenouilDSC04784.jpg',
           regions: ['marrakech', 'fez']
         },
         {
           name: 'Poisson Grillé aux Herbes',
           description: 'Poissons frais de l\'Atlantique aux herbes de saison',
-          image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=300&h=200&fit=crop',
+          image: 'https://img.freepik.com/photos-gratuite/vue-laterale-du-poisson-grille-salade-legumes-herbes-tranche-citron_141793-4941.jpg',
           regions: ['casablanca', 'rabat']
         }
       ]
@@ -60,19 +60,19 @@ const SeasonalRecommendations = ({ selectedRegion }) => {
         {
           name: 'Gazpacho Marocain',
           description: 'Soupe froide aux tomates et concombres, épicée à la marocaine',
-          image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=300&h=200&fit=crop',
+          image: 'https://www.greenvillage.ma/vyckungy/2024/07/recettes-de-gaspacho-1-e1656499198983.jpg',
           regions: ['all']
         },
         {
           name: 'Salade de Pastèque à la Menthe',
           description: 'Fraîcheur estivale avec fromage de chèvre local',
-          image: 'https://images.unsplash.com/photo-1563379091339-03246963d96a?w=300&h=200&fit=crop',
+          image: 'https://www.delscookingtwist.com/wp-content/uploads/2022/06/Watermelon-Salad-with-Feta-and-Mint_4.jpg',
           regions: ['marrakech', 'rabat']
         },
         {
           name: 'Ceviche Marocain',
           description: 'Poisson mariné aux agrumes et épices locales',
-          image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=300&h=200&fit=crop',
+          image: 'https://www.pavillonfrance.fr/sites/default/files/styles/recette_image_zoom/public/pf-ceviche_de_dorade_grise_cr_nfm.jpg?itok=0AztcgQw',
           regions: ['casablanca']
         }
       ]
@@ -91,19 +91,19 @@ const SeasonalRecommendations = ({ selectedRegion }) => {
         {
           name: 'Tagine d\'Agneau aux Pruneaux',
           description: 'Plat emblématique aux saveurs sucrées-salées',
-          image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=300&h=200&fit=crop',
+          image: 'https://img.cuisineaz.com/1200x675/2018/03/19/i137999-tajine-d-agneau-aux-pruneaux.webp',
           regions: ['fez', 'marrakech']
         },
         {
           name: 'Couscous aux Sept Légumes',
           description: 'Couscous traditionnel avec légumes d\'automne',
-          image: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=300&h=200&fit=crop',
+          image: 'https://img.cuisineaz.com/660x495/2025/02/19/i203988-couscous-marocain-facile.jpg',
           regions: ['all']
         },
         {
           name: 'Soupe Harira Enrichie',
           description: 'Version automnale avec légumineuses et viande',
-          image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=300&h=200&fit=crop',
+          image: 'https://img.cuisineaz.com/660x495/2016/06/28/i74271-harira-choumicha.jpeg',
           regions: ['all']
         }
       ]
@@ -122,19 +122,19 @@ const SeasonalRecommendations = ({ selectedRegion }) => {
         {
           name: 'Rfissa Traditionnelle',
           description: 'Plat de fête aux vermicelles et poulet épicé',
-          image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=300&h=200&fit=crop',
+          image: 'https://www.laho-rooftop.fr/wp-content/uploads/2024/09/article-2024-09-04T140247.080.jpg',
           regions: ['fez', 'rabat']
         },
         {
-          name: 'Tajine de Bœuf aux Oranges',
-          description: 'Mariage parfait entre viande et agrumes d\'hiver',
-          image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=300&h=200&fit=crop',
+          name: 'La tangia',
+          description: 'Plat de viande accompagné de citrons confits et d\'épices',
+          image: 'https://madeincity-strapi-uploads.s3.eu-west-1.amazonaws.com/Tanjia_93ece5e9f0.jpg',
           regions: ['marrakech']
         },
         {
           name: 'Chorba aux Lentilles',
           description: 'Soupe épaisse et nourrissante aux épices chaudes',
-          image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=300&h=200&fit=crop',
+          image: 'https://www.awni.fr/wp-content/uploads/2022/11/AdobeStock_106546216-scaled.jpeg',
           regions: ['all']
         }
       ]

@@ -267,15 +267,7 @@ const RestaurantCard = ({ restaurant, viewMode }) => {
           >
             Détails
           </Link>
-          {restaurant.reservationAvailable && (
-            <button
-              onClick={handleReservation}
-              style={{ backgroundColor: yellowColor, color: 'black' }}
-              className="flex-1 px-3 py-2 rounded-lg text-sm font-medium hover:bg-[#e6c200] transition-colors"
-            >
-              Réserver
-            </button>
-          )}
+
         </div>
       </div>
     </div>
