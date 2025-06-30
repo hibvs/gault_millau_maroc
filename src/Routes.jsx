@@ -7,7 +7,7 @@ import ErrorBoundary from "components/ErrorBoundary";
 // Page imports
 import AccueilHomepage from "pages/accueil-homepage";
 import ActualitSGastronomiquesEditorialHub from "pages/actualit-s-gastronomiques-editorial-hub";
-import VNementsCulinairesEventsCalendar from "pages/v-nements-culinaires-events-calendar";
+import VNementsCulinairesEventsCalendar from "pages/page-riads";
 import RestaurantsDiscoveryHub from "pages/restaurants-discovery-hub";
 import GuidesRegionauxRegionalDiscovery from "pages/guides-r-gionaux-regional-discovery";
 import NavigationSystemGlobalHeader from "pages/navigation-system-global-header";

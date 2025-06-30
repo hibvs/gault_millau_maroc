@@ -223,53 +223,29 @@ Le brunch comprend un buffet varié avec des stations culinaires en direct, des 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Icon name="Calendar" size={16} />
-              <span>Calendrier des Événements Culinaires</span>
+              <Icon name="Home" size={16} />
+              
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-serif font-bold text-text-primary mb-6">
-              Événements
+              Riads
               <span className="block text-primary">Culinaires</span>
             </h1>
             
             <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-              Découvrez les moments forts de la gastronomie marocaine : ouvertures de restaurants, 
-              festivals culinaires, dégustations de vins et événements d'exception.
+             Plongez au cœur de l’authenticité marocaine en découvrant les riads, ces maisons traditionnelles nichées dans les médinas
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link
-                to="/restaurants-discovery-hub"
-                className="inline-flex items-center px-8 py-3 bg-primary hover:bg-primary-600 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-warm transform hover:scale-105"
-              >
-                <Icon name="UtensilsCrossed" size={20} className="mr-2" />
-                Découvrir les Restaurants
-              </Link>
+        
               
-              <button className="inline-flex items-center px-8 py-3 bg-white hover:bg-surface text-primary border-2 border-primary font-medium rounded-lg transition-all duration-300 hover:shadow-warm">
-                <Icon name="Bell" size={20} className="mr-2" />
-                Recevoir les Alertes
-              </button>
+              
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Event */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-primary mb-4">
-              Événement à la Une
-            </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              L'événement culinaire incontournable de la saison
-            </p>
-          </div>
-          
-          <FeaturedEvent event={featuredEvent} />
-        </div>
-      </section>
+
 
       {/* Filters and View Toggle */}
       <section className="py-8 bg-surface border-y border-border">
@@ -313,7 +289,7 @@ Le brunch comprend un buffet varié avec des stations culinaires en direct, des 
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl lg:text-3xl font-serif font-bold text-text-primary">
-                  Événements à Venir
+                  Riads à découvrir 
                 </h2>
                 <span className="text-text-secondary">
                   {filteredEvents.length} événement{filteredEvents.length > 1 ? 's' : ''}
@@ -385,65 +361,85 @@ Le brunch comprend un buffet varié avec des stations culinaires en direct, des 
       </section>
 
       {/* Footer */}
-      <footer className="bg-text-primary text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-800 rounded-lg flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor">
-                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-serif text-lg font-bold">Gault & Millau</h3>
-                  <p className="text-sm text-white/70">Maroc</p>
-                </div>
-              </div>
-              <p className="text-white/80 text-sm leading-relaxed">
-                Votre guide de référence pour découvrir l'excellence culinaire marocaine.
-              </p>
-            </div>
+<footer className="bg-white text-black border-t border-yellow-500 py-12">
+  <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
 
-            <div>
-              <h4 className="font-semibold mb-4">Navigation</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/accueil-homepage" className="text-white/80 hover:text-white transition-colors">Accueil</Link></li>
-                <li><Link to="/restaurants-discovery-hub" className="text-white/80 hover:text-white transition-colors">Restaurants</Link></li>
-                <li><Link to="/actualit-s-gastronomiques-editorial-hub" className="text-white/80 hover:text-white transition-colors">Actualités</Link></li>
-                <li><Link to="/guides-r-gionaux-regional-discovery" className="text-white/80 hover:text-white transition-colors">Guides Régionaux</Link></li>
-              </ul>
-            </div>
+    {/* Logo + liens légaux */}
+    <div>
+      <Link to="/accueil-homepage" className="inline-block mb-4">
+        <img 
+          src="/assets/images/Logo-Gault&Millau-NOIR_V.png" 
+          alt="Gault & Millau Maroc Logo"
+          className="w-36 h-auto"
+        />
+      </Link>
+      <nav className="flex flex-col space-y-1 text-sm text-gray-600">
+        <Link to="/a-propos" className="hover:underline">A propos</Link>
+        <Link to="/mentions-legales" className="hover:underline">Mentions légales</Link>
+        <Link to="/cgu" className="hover:underline">CGU</Link>
+        <Link to="/politique-confidentialite" className="hover:underline">Politique de confidentialité</Link>
+      </nav>
+    </div>
 
-            <div>
-              <h4 className="font-semibold mb-4">Événements</h4>
-              <ul className="space-y-2 text-sm">
-                <li><span className="text-white/80">Festivals Culinaires</span></li>
-                <li><span className="text-white/80">Ouvertures Restaurants</span></li>
-                <li><span className="text-white/80">Dégustations Vins</span></li>
-                <li><span className="text-white/80">Événements Chefs</span></li>
-              </ul>
-            </div>
+    {/* Notre sélection */}
+    <div>
+      <h3 className="font-semibold mb-3 uppercase text-sm">NOTRE SÉLECTION</h3>
+      <nav className="flex flex-col space-y-1 text-sm text-gray-600">
+        <Link to="/restaurants" className="hover:underline">Restaurants</Link>
+        <Link to="/vins" className="hover:underline">Vins</Link>
+        <Link to="/champagnes" className="hover:underline">Champagnes</Link>
+        <Link to="/spiritueux" className="hover:underline">Spiritueux</Link>
+        <Link to="/domaines" className="hover:underline">Domaines</Link>
+        <Link to="/hotels" className="hover:underline">Hôtels</Link>
+        <Link to="/artisans" className="hover:underline">Artisans</Link>
+      </nav>
+    </div>
 
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-white/80">
-                <p>contact@gaultmillau.ma</p>
-                <p>+212 5XX-XXXXXX</p>
-                <div className="flex space-x-4 mt-4">
-                  <Icon name="Facebook" size={20} className="hover:text-primary cursor-pointer transition-colors" />
-                  <Icon name="Instagram" size={20} className="hover:text-primary cursor-pointer transition-colors" />
-                  <Icon name="Twitter" size={20} className="hover:text-primary cursor-pointer transition-colors" />
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* Contact */}
+    <div>
+      <h3 className="font-semibold mb-3 uppercase text-sm">CONTACT</h3>
+      <address className="not-italic text-gray-600 text-sm space-y-1">
+        <div>37-39 rue Boissière</div>
+        <div>75016 Paris</div>
+        <div>France</div>
+        <div>Appeler : <a href="tel:0141409980" className="hover:underline">01 41 40 99 80</a></div>
+        <div><Link to="/contact" className="hover:underline">Contactez-nous</Link></div>
+      </address>
+    </div>
 
-          <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} Gault & Millau Maroc. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+    {/* Réseaux sociaux + newsletter */}
+    <div className="flex flex-col items-start justify-between">
+      <div className="flex space-x-4 mb-6">
+        <a href="#" aria-label="Facebook" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="Facebook" size={24} />
+        </a>
+        <a href="#" aria-label="Instagram" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="Instagram" size={24} />
+        </a>
+        <a href="#" aria-label="X (ex Twitter)" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="X" size={24} />
+        </a>
+        <a href="#" aria-label="LinkedIn" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="Linkedin" size={24} />
+        </a>
+        <a href="#" aria-label="TikTok" className="text-gray-600 hover:text-yellow-500">
+          <Icon name="TikTok" size={24} />
+        </a>
+      </div>
+
+      <div className="text-xs text-gray-500 italic mb-4">
+        Inscrivez-vous à notre newsletter <br />
+        <Link to="/newsletters" className="hover:underline">Toutes les newsletters</Link>
+      </div>
+
+      <div className="text-xs text-gray-500 italic text-center w-full">
+        GaultMillau © {new Date().getFullYear()} <br />
+        <span className="not-italic">Tous droits réservés</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
     </div>
   );
 };
