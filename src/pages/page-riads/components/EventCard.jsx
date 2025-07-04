@@ -38,11 +38,7 @@ const EventCard = ({ event }) => {
             />
           </div>
           
-          {/* Event Type Badge */}
-          <div className={`absolute top-4 left-4 ${typeInfo.bg} ${typeInfo.color} px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-1`}>
-            <Icon name={typeInfo.icon} size={14} />
-            <span>{typeInfo.label}</span>
-          </div>
+
 
           {/* Date Badge */}
           <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm text-text-primary px-3 py-2 rounded-lg text-sm font-medium">
@@ -68,16 +64,7 @@ const EventCard = ({ event }) => {
               </p>
             </div>
             
-            {event.ticketPrice && (
-              <div className="text-right ml-4">
-                <div className="text-lg font-bold text-primary">
-                  {event.ticketPrice}
-                </div>
-                <div className="text-xs text-text-secondary">
-                  par personne
-                </div>
-              </div>
-            )}
+
           </div>
 
           {/* Event Details */}
