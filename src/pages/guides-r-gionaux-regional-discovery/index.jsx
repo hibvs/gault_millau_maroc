@@ -399,9 +399,6 @@ const GuidesRegionauxRegionalDiscovery = () => {
         <a href="#" aria-label="LinkedIn" className="text-gray-600 hover:text-yellow-500">
           <Icon name="Linkedin" size={24} />
         </a>
-        <a href="#" aria-label="TikTok" className="text-gray-600 hover:text-yellow-500">
-          <Icon name="TikTok" size={24} />
-        </a>
       </div>
 
       <div className="text-xs text-gray-500 italic mb-4">
