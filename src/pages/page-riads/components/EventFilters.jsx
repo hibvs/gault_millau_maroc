@@ -1,22 +1,17 @@
 import React from 'react';
 import Icon from 'components/AppIcon';
 
-const EventFilters = ({ eventTypes, locations, selectedFilters, onFilterChange }) => {
+const EventFilters = ({ locations, selectedFilters, onFilterChange }) => {
   const dateOptions = [
     { id: 'all', name: 'Toutes les dates' },
-    { id: 'today', name: 'Aujourd\'hui' },
+    { id: 'today', name: "Aujourd'hui" },
     { id: 'week', name: 'Cette semaine' },
     { id: 'month', name: 'Ce mois' }
   ];
 
   return (
     <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-6 w-full lg:w-auto">
-      {/* Event Type Filter */}
-      <div className="w-full lg:w-auto">
-  
-
-      </div>
-
+      
       {/* Location Filter */}
       <div className="w-full lg:w-auto">
         <label className="block text-sm font-medium text-text-primary mb-2">
@@ -67,12 +62,13 @@ const EventFilters = ({ eventTypes, locations, selectedFilters, onFilterChange }
         </div>
       </div>
 
-
-
       {/* Clear Filters */}
-      {(selectedFilters.type !== 'all' || selectedFilters.location !== 'all' || selectedFilters.date !== 'all') && (
+      {(selectedFilters.location !== 'all' || selectedFilters.date !== 'all') && (
         <button
-          onClick={() => onFilterChange('type', 'all') || onFilterChange('location', 'all') || onFilterChange('date', 'all')}
+          onClick={() => {
+            onFilterChange('location', 'all');
+            onFilterChange('date', 'all');
+          }}
           className="inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary transition-colors duration-300"
         >
           <Icon name="X" size={14} />
