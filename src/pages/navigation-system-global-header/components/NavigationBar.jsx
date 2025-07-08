@@ -34,7 +34,7 @@ const NavigationBar = () => {
     },
     {
       name: 'VINS',
-      path: '/restaurants-discovery-hub?category=vins',
+      path: '/restaurants-discovery-hub?category=vins',  
       // ICON PLACEHOLDER: Replace with wine glass icon
       icon: 'Wine',
       description: 'Wine selection'
