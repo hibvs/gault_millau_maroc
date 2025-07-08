@@ -13,6 +13,11 @@ import GuidesRegionauxRegionalDiscovery from "pages/guides-r-gionaux-regional-di
 import NavigationSystemGlobalHeader from "pages/navigation-system-global-header";
 import NotFound from "pages/NotFound";
 
+// ✅ Nouveaux imports
+import PageAlcohol from "pages/page-alcohol";
+import PagePeople from "pages/page-people";
+import PageRecette from "pages/page-recette";
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -26,6 +31,12 @@ const Routes = () => {
           <Route path="/restaurants-discovery-hub" element={<RestaurantsDiscoveryHub />} />
           <Route path="/guides-r-gionaux-regional-discovery" element={<GuidesRegionauxRegionalDiscovery />} />
           <Route path="/navigation-system-global-header" element={<NavigationSystemGlobalHeader />} />
+
+          {/* ✅ Nouvelles routes */}
+          <Route path="/page-alcohol" element={<PageAlcohol />} />
+          <Route path="/page-people" element={<PagePeople />} />
+          <Route path="/page-recette" element={<PageRecette />} />
+
           <Route path="*" element={<NotFound />} />
         </RouterRoutes>
       </ErrorBoundary>
