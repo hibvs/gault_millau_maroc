@@ -32,12 +32,12 @@ const Footer = () => {
           <h3 className="font-semibold mb-3 uppercase text-sm">NOTRE SÉLECTION</h3>
           <nav className="flex flex-col space-y-1 text-sm text-gray-600">
             <Link to="/restaurants" className="hover:underline">Restaurants</Link>
-            <Link to="/vins" className="hover:underline">Vins</Link>
-            <Link to="/champagnes" className="hover:underline">Champagnes</Link>
-            <Link to="/spiritueux" className="hover:underline">Spiritueux</Link>
-            <Link to="/domaines" className="hover:underline">Domaines</Link>
-            <Link to="/hotels" className="hover:underline">Hôtels</Link>
-            <Link to="/artisans" className="hover:underline">Artisans</Link>
+            <Link to="/vins" className="hover:underline">Artisans</Link>
+            <Link to="/champagnes" className="hover:underline">Hôtels</Link>
+            <Link to="/spiritueux" className="hover:underline">Alcool</Link>
+            <Link to="/domaines" className="hover:underline">Riads</Link>
+            <Link to="/hotels" className="hover:underline">People</Link>
+            <Link to="/artisans" className="hover:underline">Recettes</Link>
           </nav>
         </div>
 

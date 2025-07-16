@@ -399,7 +399,9 @@ const RestaurantsDiscoveryHub = () => {
           </div>
         </div>
       </section>
-      <footer className="bg-white text-black border-t border-yellow-500 py-12">
+
+       {/* Footer */}
+ <footer className="bg-white text-black border-t border-yellow-500 py-12">
   <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
 
     {/* Logo + liens légaux */}
@@ -423,13 +425,13 @@ const RestaurantsDiscoveryHub = () => {
     <div>
       <h3 className="font-semibold mb-3 uppercase text-sm">NOTRE SÉLECTION</h3>
       <nav className="flex flex-col space-y-1 text-sm text-gray-600">
-        <Link to="/restaurants" className="hover:underline">Restaurants</Link>
-        <Link to="/vins" className="hover:underline">Vins</Link>
-        <Link to="/champagnes" className="hover:underline">Champagnes</Link>
-        <Link to="/spiritueux" className="hover:underline">Spiritueux</Link>
-        <Link to="/domaines" className="hover:underline">Domaines</Link>
-        <Link to="/hotels" className="hover:underline">Hôtels</Link>
+        <Link to="/restaurant" className="hover:underline">Restaurants</Link>
         <Link to="/artisans" className="hover:underline">Artisans</Link>
+        <Link to="/hotels" className="hover:underline">Hôtels</Link>
+        <Link to="/alcool" className="hover:underline">Alcool</Link>
+        <Link to="/riads" className="hover:underline">Riads</Link>
+        <Link to="/people" className="hover:underline">People</Link>
+        <Link to="/recettes" className="hover:underline">Recettes</Link>
       </nav>
     </div>
 
@@ -460,6 +462,7 @@ const RestaurantsDiscoveryHub = () => {
         <a href="#" aria-label="LinkedIn" className="text-gray-600 hover:text-yellow-500">
           <Icon name="Linkedin" size={24} />
         </a>
+
       </div>
 
       <div className="text-xs text-gray-500 italic mb-4">

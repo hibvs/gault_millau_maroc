@@ -14,7 +14,7 @@ import NavigationSystemGlobalHeader from "pages/navigation-system-global-header"
 import NotFound from "pages/NotFound";
 
 // ✅ Nouveaux imports
-import PageAlcohol from "pages/page-alcohol";
+//import PageAlcohol from "pages/page-alcohol";
 import PagePeople from "pages/page-people";
 import PageRecette from "pages/page-recette";
 
@@ -33,7 +33,7 @@ const Routes = () => {
           <Route path="/navigation-system-global-header" element={<NavigationSystemGlobalHeader />} />
 
           {/* ✅ Nouvelles routes */}
-          <Route path="/page-alcohol" element={<PageAlcohol />} />
+         {/* <Route path="/page-alcohol" element={<PageAlcohol />} /> */}
           <Route path="/page-people" element={<PagePeople />} />
           <Route path="/page-recette" element={<PageRecette />} />
 
